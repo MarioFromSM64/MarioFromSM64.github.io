@@ -1,0 +1,147 @@
+:root {
+    --background-color: #1c1c1c;
+    --m8use-green: 130, 210, 100;
+    --m8use-dark-green: 25, 165, 10;
+}
+
+@font-face {
+    font-family: 'minecraft';
+    src: url('assets/Minecraft.otf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: rgb(var(--m8use-green));
+    font-family: "minecraft", sans-serif;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.m8use-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(var(--m8use-green));
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.yt-buttons {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.yt-buttons a {
+    flex: 1;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+
+    background-color: transparent;
+    color: rgb(var(--m8use-green));
+
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: inherit;
+
+    border: 2px solid rgb(var(--m8use-green));
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.1s ease;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    flex-shrink: 0;
+
+    background-color: currentColor;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.icon-youtube {
+    -webkit-mask-image: url('assets/youtube.svg');
+    mask-image: url('assets/youtube.svg');
+}
+
+.icon-twitch {
+    -webkit-mask-image: url('assets/twitch.svg');
+    mask-image: url('assets/twitch.svg');
+}
+
+.icon-tiktok {
+    -webkit-mask-image: url('assets/tiktok.svg');
+    mask-image: url('assets/tiktok.svg');
+}
+
+a:hover {
+    background-color: rgb(var(--m8use-green));
+    border-color: rgb(var(--m8use-green));
+    color: #121212;
+}
+
+a:active {
+    transform: scale(0.98);
+}
+
+a:hover {
+    background-color: rgb(var(--m8use-green));
+    border-color: rgb(var(--m8use-green));
+    color: #121212;
+}
+
+
+@media (max-width: 480px) {
+    .yt-buttons {
+        flex-direction: column;
+    }
+}
