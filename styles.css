@@ -20,21 +20,22 @@ body {
     color: rgb(var(--m8use-green));
     font-family: "minecraft", sans-serif;
     min-height: 100vh;
-    width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     padding: 20px;
     overflow-x: hidden;
 }
 
 .page-content {
+    flex: 1;
     width: 100%;
     max-width: 550px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .m8use-image img {
@@ -137,11 +138,8 @@ h1 {
 }
 
 footer {
-    position: fixed;
-    bottom: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-
+    margin-top: 24px;
+    text-align: center;
     font-size: 0.8rem;
     color: #888;
 }
