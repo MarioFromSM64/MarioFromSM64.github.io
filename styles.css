@@ -70,28 +70,6 @@ h1 {
     flex: 1;
 }
 
-a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    padding: 14px 20px;
-
-    background-color: transparent;
-    color: rgb(var(--m8use-green));
-
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-family: inherit;
-
-    border: 2px solid rgb(var(--m8use-green));
-    border-radius: 8px;
-
-    cursor: pointer;
-    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.1s ease;
-}
-
 .icon {
     width: 22px;
     height: 22px;
@@ -123,22 +101,63 @@ a {
     mask-image: url('assets/tiktok.svg');
 }
 
-a:hover {
+.links-container a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 20px;
+
+    background-color: transparent;
+    color: rgb(var(--m8use-green));
+
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: inherit;
+
+    border: 2px solid rgb(var(--m8use-green));
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.1s ease;
+}
+
+.links-container a:hover {
     background-color: rgb(var(--m8use-green));
     border-color: rgb(var(--m8use-green));
     color: #121212;
 }
 
-a:active {
+.links-container a:active {
     transform: scale(0.98);
 }
 
-a:hover {
-    background-color: rgb(var(--m8use-green));
-    border-color: rgb(var(--m8use-green));
-    color: #121212;
+footer {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 0.8rem;
+    color: #888;
 }
 
+address {
+    font-style: normal;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: rgb(var(--m8use-green));
+}
 
 @media (max-width: 480px) {
     .yt-buttons {
